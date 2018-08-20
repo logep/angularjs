@@ -1,0 +1,7 @@
+# folder node_modules
+node_modules/
+private/libs/
+app/img/
+_build/
+server/node_modules/
+.idea/
