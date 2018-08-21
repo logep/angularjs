@@ -5,7 +5,7 @@
  ;(function() {
 
     angular
-    .module('todo')
+    .module('TdAdmin')
     .controller('TodoController', TodoController);
 
     TodoController.$inject = ['$scope'];

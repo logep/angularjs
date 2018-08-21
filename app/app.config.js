@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('todo').config([ '$locationProvider','$urlRouterProvider','$stateProvider',
-// angular.module('todo').config(['$locationProvider', '$routeProvider',
+angular.module('TdAdmin').config([ '$locationProvider','$urlRouterProvider','$stateProvider',
+// angular.module('TdAdmin').config(['$locationProvider', '$routeProvider',
     function config($locationProvider, $urlRouterProvider,$stateProvider) {
         $locationProvider.hashPrefix('');
         $urlRouterProvider.otherwise('/phones');

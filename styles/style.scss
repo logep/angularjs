@@ -1,12 +1,3 @@
-/******************************************************************
-
-Site Name: AngularJS Boilerplate
-Code: Jozef Butko - jozefbutko.com/resume
-Date: Mar 2015
-
-******************************************************************/
-
-// normalize: http://necolas.github.io/normalize.css/
 @import "partials/normalize";
 
 
@@ -14,12 +5,16 @@ Date: Mar 2015
 @import "partials/variables";
 @import "partials/preloader";
 @import "partials/backTop";
+@import "partials/mixins";
+@import "partials/layout";
+@import "partials/pageTop";
+@import "partials/sidebar";
 
 // Angular Material
 @import "../node_modules/angular/angular-csp.css";
 
 // Angular Material
-@import "../node_modules/angular-material/angular-material.scss";
+//@import "../node_modules/angular-material/angular-material.scss";
 
 // Sass variables
 @import "partials/main";

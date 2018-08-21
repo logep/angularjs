@@ -1,7 +1,7 @@
 'use strict';
 
 angular.
-  module('todo').
+  module('TdAdmin').
   animation('.phone', function phoneAnimationFactory() {
     return {
       addClass: animateIn,

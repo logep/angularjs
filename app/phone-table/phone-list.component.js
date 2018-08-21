@@ -2,7 +2,7 @@
 
 // Register `phoneList` component, along with its associated controller and template
 angular.
-  module('todo').
+  module('TdAdmin').
   component('phoneTable', {
     templateUrl: 'app/phone-table/phone-list.template.html',
     controller: ['Phone',

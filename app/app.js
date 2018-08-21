@@ -4,15 +4,16 @@
      * Definition of the main app module and its dependencies
      */
     angular
-        .module('todo',[  'ngAnimate','ui.router',
+        .module('TdAdmin',[  'ngAnimate','ui.router',
             'core',
             'phoneDetail',
             'phoneList',
-            'theme',
+            'TdAdmin.theme',
+            'TdAdmin.pages',
             ]);
 
     // angular
-    //         .module('todo',[  'ngAnimate','ngRoute',
+    //         .module('TdAdmin',[  'ngAnimate','ngRoute',
     //             'core',
     //             'phoneDetail',
     //             // 'phoneList',

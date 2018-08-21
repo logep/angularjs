@@ -19,18 +19,18 @@
     </div>
     <div class="col-md-10">
       <!--Body content-->
-
-      <ul class="phones">
-        <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp"
-            class="thumbnail phone-list-item">
-          <a href="#!/phones/{{phone.id}}" class="thumb">
+      <table class="table table-bordered">
+        <tbody>
+        <tr  ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+          <th scope="row">  <a href="#!/phones/{{phone.id}}" class="thumb">
             <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
-          </a>
-          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-          <p>{{phone.snippet}}</p>
-        </li>
-      </ul>
+          </a></th>
+          <td> <a href="#/phones/{{phone.id}}">{{phone.name}}</a></td>
+          <td>   <p>{{phone.snippet}}</p></td>
+        </tr>
 
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

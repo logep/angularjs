@@ -24,3 +24,49 @@ $info: #2dacd1 !default;
 $success: #90b900 !default;
 $warning: #dfb81c !default;
 $danger: #e85656 !default;
+$font-family: 'Roboto', sans-serif;
+
+$assets-root: '../assets/';
+$images-root: $assets-root + 'img/';
+$fonts-root: $assets-root + 'fonts/';
+$font-thin: 100;
+$font-light: 300;
+$font-normal: 400;
+$font-bold: 700;
+$font-ultraBold: 900;
+
+
+$resXXL: 1280px;
+$resXL: 1170px;
+$resL: 991px;
+$resM: 768px;
+$resS: 660px;
+$resXS: 500px;
+$resXXS: 435px;
+$resMin: 320px;
+$top-height: 66px;
+
+$default: rgba(#000000, 0.2);
+$body-bg: #F0F3F4;
+$default-text: #ffffff;
+$help-text: #eeeeee;
+$label-text: #ffffff;
+$facebook-color: #3b5998;
+$twitter-color: #55acee;
+$google-color: #dd4b39;
+$linkedin-color: #0177B5;
+$github-color: #6b6b6b;
+$stackoverflow-color: #2F96E8;
+$dribble-color: #F26798;
+$behace-color: #0093FA;
+
+//$sidebar: rgba(#000000, 0.5);
+$sidebar: #1C2B36;
+$sidebar-text: #ffffff;
+$dropdown-text: #7d7d7d;
+$bootstrap-panel-text: #7d7d7d;
+$bootstrap-panel-bg: #ffffff;
+$mail-box: whitesmoke;
+$auth-panel-background: rgba(#000000, 0.55);
+$progress-background: rgba(#000000, 0.15);
+$progress-default: #ffffff;

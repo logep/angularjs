@@ -205,7 +205,7 @@ gulp.task('templates', function() {
     ])
     .pipe($.minifyHtml())
     .pipe($.angularTemplatecache({
-      module: 'todo'
+      module: 'TdAdmin'
     }))
     .pipe(gulp.dest('_build/js'));
 });

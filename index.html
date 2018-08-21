@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en" ng-csp="" ng-app="todo">
+<html lang="en"  ng-app="TdAdmin">
 
 <head>
 
@@ -18,11 +18,11 @@
 
     <!-- CSS -->
     <!-- build:css css/style.min.css -->
-    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="app/app.css" />
     <link rel="stylesheet" href="app/app.animations.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
     <!-- endbuild -->
 
 </head>
@@ -30,7 +30,17 @@
 <body class="main-wrapper">
 <div  ng-if="$pageFinishedLoading" class="view-container">
     <!--<div ng-view class="view-frame"></div>-->
-    <ui-view></ui-view>
+    <ba-sidebar></ba-sidebar>
+    <page-top></page-top>
+    <div class="al-main">
+        <div class="al-content">
+            <!--<ui-view></ui-view>-->
+            <!--<content-top></content-top>-->
+            <div ui-view></div>
+        </div>
+    </div>
+
+
     <back-top></back-top>
 </div>
 
@@ -97,6 +107,15 @@
 <script src="app/phone-table/phone-list.component.js"></script>
 <script src="app/theme/components/components.module.js"></script>
 <script src="app/theme/components/backTop/backTop.directive.js"></script>
+<script src="app/theme/components/pageTop/pageTop.directive.js"></script>
+<script src="app/theme/components/baSidebar/BaSidebarCtrl.js"></script>
+<script src="app/theme/components/baSidebar/baSidebar.directive.js"></script>
+<script src="app/theme/components/baSidebar/baSidebar.service.js"></script>
+<script src="app/pages/pages.module.js"></script>
+<script src="app/pages/tables/tables.module.js"></script>
+<script src="app/pages/tables/TablesPageCtrl.js"></script>
+<script src="app/theme/components/baSidebar/baSidebarHelpers.directive.js"></script>
+<script src="app/theme/components/contentTop/contentTop.directive.js"></script>
 
 
 

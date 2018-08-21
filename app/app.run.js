@@ -1,7 +1,7 @@
 ;(function() {
 
     angular
-    .module('todo')
+    .module('TdAdmin')
     .run(run);
 
     function run() {

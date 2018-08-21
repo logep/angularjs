@@ -1,7 +1,7 @@
 {
-  "name": "todoangularjs",
+  "name": "tdadmin",
   "version": "1.0.0",
-  "description": "toDo app",
+  "description": "tdadmin app",
   "main": "app/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,21 +10,6 @@
     "server": "gulp server",
     "serverbuild": "gulp server-build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Panbaba9n/ToDoAngularJS.git"
-  },
-  "keywords": [
-    "todo",
-    "app",
-    "AngularJS"
-  ],
-  "author": "Vladimir Kolesnikov",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Panbaba9n/ToDoAngularJS/issues"
-  },
-  "homepage": "https://github.com/Panbaba9n/ToDoAngularJS#readme",
   "dependencies": {
     "angular": "^1.6.7",
     "angular-animate": "^1.6.7",

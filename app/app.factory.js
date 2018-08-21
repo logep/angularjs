@@ -1,7 +1,7 @@
 ;(function() {
 
     angular
-    .module('todo')
+    .module('TdAdmin')
     .factory('Test', Test);
 
     Test.$inject = ['$http'];

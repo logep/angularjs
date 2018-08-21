@@ -1,7 +1,7 @@
 
   'use strict';
 
-  angular.module('theme')
+  angular.module('TdAdmin.theme')
     .run(themeRun);
   /** @ngInject */
   function themeRun($timeout, $rootScope) {
@@ -9,6 +9,6 @@
       if (!$rootScope.$pageFinishedLoading) {
         $rootScope.$pageFinishedLoading = true;
       }
-    }, 2000);
+    }, 0);
   }
 

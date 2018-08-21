@@ -1,5 +1,5 @@
   'use strict';
-  angular.module('theme', [
-      'theme.components',
+  angular.module('TdAdmin.theme', [
+      'TdAdmin.theme.components',
   ]);
 

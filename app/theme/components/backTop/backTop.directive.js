@@ -1,5 +1,5 @@
   'use strict';
-  angular.module('theme.components')
+  angular.module('TdAdmin.theme.components')
       .directive('backTop', backTop);
   /** @ngInject */
   function backTop() {
