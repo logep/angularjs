@@ -18,7 +18,7 @@
 
     <!-- CSS -->
     <!-- build:css css/style.min.css -->
-    <!--<link rel="stylesheet" type="text/css" href="styles/style.css"/>-->
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="app/app.css" />
     <link rel="stylesheet" href="app/app.animations.css" />
@@ -27,11 +27,17 @@
 </head>
 
 <body class="main-wrapper">
-<div class="view-container">
+<div  ng-if="$pageFinishedLoading" class="view-container">
     <!--<div ng-view class="view-frame"></div>-->
     <ui-view></ui-view>
 </div>
-</body>
+
+
+<div id="preloader" ng-show="!$pageFinishedLoading">
+    <div></div>
+</div>
+
+
 <!-- Vendors -->
 <!-- build:nonangularlibs js/nonangularlibs.js -->
 <script type="text/javascript" src="js/nonangular/jquery-1.11.2.min.js"></script>
@@ -75,6 +81,8 @@
 <!-- Application sections -->
 <!-- build:mainapp js/mainapp.js -->
 <script src="app/core/core.module.js"></script>
+<script src="app/theme/theme.module.js"></script>
+<script src="app/theme/theme.run.js"></script>
 <script src="app/core/checkmark/checkmark.filter.js"></script>
 <script src="app/core/phone/phone.module.js"></script>
 <script src="app/core/phone/phone.service.js"></script>
@@ -94,6 +102,8 @@
 <!-- templates from $templateCache -->
 <!-- build:templates -->
 <!-- endbuild -->
+
+</body>
 
 
 </html>

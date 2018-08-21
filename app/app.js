@@ -8,6 +8,7 @@
             'core',
             'phoneDetail',
             'phoneList',
+            'theme',
             ]);
 
     // angular

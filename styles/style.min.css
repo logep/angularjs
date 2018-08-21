@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 img,legend{border:0}
+#preloader,#preloader>div{backface-visibility:hidden}
 body,legend,td,th{padding:0}
 button,input,select,sub,sup,textarea{vertical-align:baseline}
 pre,textarea{overflow:auto}
@@ -13,12 +14,11 @@ button[disabled],html input[disabled],html input[type=button][disabled],input[ty
 .md-calendar,.md-calendar-day-header,table{border-spacing:0;border-collapse:collapse}
 .md-ripple-container,.md-shadow,md-fab-speed-dial:not(.md-hover-full){pointer-events:none}
 .md-visually-hidden,button,select{text-transform:none}
-._md-nav-bar-list,.md-autocomplete-suggestions li:focus,.md-button,.md-button._md-nav-button:focus,.md-button:focus,.md-chips .md-chip-input-container input:focus,.md-chips .md-chip-input-container input:not([type]):focus,.md-chips .md-chip-input-container input[type=tel]:focus,.md-chips .md-chip-input-container input[type=url]:focus,.md-chips .md-chip-input-container input[type=text]:focus,.md-chips .md-chip-input-container input[type=email]:focus,.md-chips .md-chip-input-container input[type=number]:focus,.md-chips md-chip .md-chip-content:focus,.md-datepicker-calendar md-calendar:focus,.md-datepicker-input,.md-tab.md-focused,.md-tab:focus,[tabindex='-1']:focus,a:active,a:hover,md-autocomplete .md-show-clear-button button:focus,md-autocomplete input:not(.md-input),md-bottom-sheet md-list-item,md-checkbox,md-input-container .md-input:focus,md-input-container .md-input:invalid,md-list-item .md-no-style:focus,md-list-item.md-no-proxy:focus,md-option:focus,md-radio-group:focus,md-select:focus,md-slider .md-slider-wrapper,md-slider:focus,md-switch,md-switch .md-thumb,md-tabs-wrapper md-next-button:focus,md-tabs-wrapper md-prev-button:focus{outline:0}
+._md-nav-bar-list,.md-autocomplete-suggestions li:focus,.md-button,.md-button._md-nav-button:focus,.md-button:focus,.md-chips .md-chip-input-container input:focus,.md-chips .md-chip-input-container input:not([type]):focus,.md-chips .md-chip-input-container input[type=number]:focus,.md-chips .md-chip-input-container input[type=tel]:focus,.md-chips .md-chip-input-container input[type=url]:focus,.md-chips .md-chip-input-container input[type=text]:focus,.md-chips .md-chip-input-container input[type=email]:focus,.md-chips md-chip .md-chip-content:focus,.md-datepicker-calendar md-calendar:focus,.md-datepicker-input,.md-tab.md-focused,.md-tab:focus,[tabindex='-1']:focus,a:active,a:hover,md-autocomplete .md-show-clear-button button:focus,md-autocomplete input:not(.md-input),md-bottom-sheet md-list-item,md-checkbox,md-input-container .md-input:focus,md-input-container .md-input:invalid,md-list-item .md-no-style:focus,md-list-item.md-no-proxy:focus,md-option:focus,md-radio-group:focus,md-select:focus,md-slider .md-slider-wrapper,md-slider:focus,md-switch,md-switch .md-thumb,md-tabs-wrapper md-next-button:focus,md-tabs-wrapper md-prev-button:focus{outline:0}
 .ng-cloak,.ng-hide:not(.ng-hide-animate),.x-ng-cloak,[data-ng-cloak],[ng-cloak],[ng\:cloak],[x-ng-cloak]{display:none!important}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,ng\:form,section,summary{display:block}
 .ng-animate-shim{visibility:hidden}
 .ng-anchor{position:absolute}
-body,html,sub,sup{position:relative}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
 audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
@@ -29,7 +29,7 @@ dfn{font-style:italic}
 h1{font-size:2em;margin:.67em 0}
 mark{background:#ff0;color:#000}
 small{font-size:80%}
-sub,sup{font-size:75%;line-height:0}
+sub,sup{font-size:75%;line-height:0;position:relative}
 sup{top:-.5em}
 sub{bottom:-.25em}
 svg:not(:root){overflow:hidden}
@@ -47,7 +47,21 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 input[type=search]{-moz-box-sizing:content-box;-webkit-appearance:textfield;box-sizing:content-box;-webkit-box-sizing:content-box}
 input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
 fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
-body,html{height:100%;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;min-height:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+@-webkit-keyframes spin{0%{transform:rotate(0)}
+100%{transform:rotate(360deg)}
+}
+@-moz-keyframes spin{0%{-moz-transform:rotate(0)}
+100%{-moz-transform:rotate(360deg)}
+}
+@keyframes spin{0%{transform:rotate(0)}
+100%{transform:rotate(360deg)}
+}
+#preloader{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000;background:#000}
+#preloader>div{display:block;position:relative;left:50%;top:50%;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;border:3px solid transparent;border-top-color:#e85656;transform:translate3d(0,0,0);animation:spin 2s linear infinite}
+#preloader>div:after,#preloader>div:before{content:"";position:absolute}
+#preloader>div:before{top:5px;left:5px;right:5px;bottom:5px;border-radius:50%;border:3px solid transparent;border-top-color:#209e91;-webkit-animation:spin 3s linear infinite;animation:spin 3s linear infinite}
+#preloader>div:after{top:15px;left:15px;right:15px;bottom:15px;border-radius:50%;border:3px solid transparent;border-top-color:#dfb81c;animation:spin 1.5s linear infinite}
+body,html{height:100%;position:relative;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;min-height:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 body{margin:0}
 .inset{padding:10px}
 a.md-no-style,button.md-no-style{font-weight:400;background-color:inherit;text-align:left;border:none;padding:0;margin:0}
@@ -315,7 +329,7 @@ md-checkbox .md-label{display:inline-block;white-space:normal;user-select:text;m
 .md-chips .md-chip-input-container md-autocomplete input,md-content{position:relative}
 .md-chips .md-chip-input-container{display:block;line-height:32px;margin:8px 8px 0 0;padding:0;float:left}
 [dir=rtl] .md-chips .md-chip-input-container{margin:8px 0 0 8px;float:right}
-.md-chips .md-chip-input-container input:not([type]),.md-chips .md-chip-input-container input[type=tel],.md-chips .md-chip-input-container input[type=url],.md-chips .md-chip-input-container input[type=text],.md-chips .md-chip-input-container input[type=email],.md-chips .md-chip-input-container input[type=number]{border:0;height:32px;line-height:32px;padding:0}
+.md-chips .md-chip-input-container input:not([type]),.md-chips .md-chip-input-container input[type=number],.md-chips .md-chip-input-container input[type=tel],.md-chips .md-chip-input-container input[type=url],.md-chips .md-chip-input-container input[type=text],.md-chips .md-chip-input-container input[type=email]{border:0;height:32px;line-height:32px;padding:0}
 .md-chips .md-chip-input-container md-autocomplete,.md-chips .md-chip-input-container md-autocomplete-wrap{background:0 0;height:32px}
 .md-chips .md-chip-input-container input{border:0;height:32px;line-height:32px;padding:0;background:0 0}
 .md-chips .md-chip-input-container:not(:first-child){margin:8px 8px 0 0}
@@ -494,7 +508,7 @@ md-input-container .md-errors-spacer{float:right;min-height:24px;min-width:1px}
 [dir=rtl] md-input-container .md-errors-spacer{float:left}
 md-input-container>md-icon{position:absolute;top:8px;left:2px;right:auto}
 [dir=rtl] md-input-container>md-icon{left:auto;right:2px}
-md-input-container input[type=tel],md-input-container input[type=url],md-input-container input[type=text],md-input-container input[type=password],md-input-container input[type=datetime],md-input-container input[type=datetime-local],md-input-container input[type=date],md-input-container input[type=month],md-input-container input[type=time],md-input-container input[type=week],md-input-container input[type=color],md-input-container input[type=search],md-input-container input[type=email],md-input-container input[type=number],md-input-container textarea{-moz-appearance:none;-webkit-appearance:none}
+md-input-container input[type=number],md-input-container input[type=tel],md-input-container input[type=url],md-input-container input[type=text],md-input-container input[type=password],md-input-container input[type=datetime],md-input-container input[type=datetime-local],md-input-container input[type=date],md-input-container input[type=month],md-input-container input[type=time],md-input-container input[type=week],md-input-container input[type=color],md-input-container input[type=search],md-input-container input[type=email],md-input-container textarea{-moz-appearance:none;-webkit-appearance:none}
 md-input-container input[type=datetime-local],md-input-container input[type=date],md-input-container input[type=month],md-input-container input[type=time],md-input-container input[type=week]{min-height:26px}
 md-input-container textarea{resize:none;overflow:hidden}
 md-input-container textarea.md-input{min-height:26px;-ms-flex-preferred-size:auto}

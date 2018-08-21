@@ -9,8 +9,10 @@ Date: Mar 2015
 // normalize: http://necolas.github.io/normalize.css/
 @import "partials/normalize";
 
+
 // Sass variables
 @import "partials/variables";
+@import "partials/preloader";
 
 // Angular Material
 @import "../node_modules/angular/angular-csp.css";
