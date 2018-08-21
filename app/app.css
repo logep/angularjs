@@ -24,6 +24,10 @@ h1 {
   margin: -0.5em 1em 1.5em 0;
   padding-bottom: 1em;
   width: 100px;
+  overflow: hidden;
+}
+.thumb  img{
+width:100%;
 }
 
 /* View: Phone detail */

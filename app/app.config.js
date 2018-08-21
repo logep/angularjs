@@ -15,7 +15,11 @@ angular.module('todo').config([ '$locationProvider','$urlRouterProvider','$state
             url: '/phones',
             template: '<phone-list></phone-list>'
         }).state({
-            name: 'hello',
+            name: 'table',
+            url: '/table',
+            template: '<phone-table></phone-table>'
+        }).state({
+            name: 'detail',
             url: '/phones/:phoneId',
             template: '<phone-detail></phone-detail>'
         })

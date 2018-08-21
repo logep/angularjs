@@ -1,4 +1,8 @@
 {
+  "name": "todoangularjs",
+  "version": "1.0.0",
+  "description": "toDo app",
+  "main": "app/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp",
@@ -6,6 +10,21 @@
     "server": "gulp server",
     "serverbuild": "gulp server-build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Panbaba9n/ToDoAngularJS.git"
+  },
+  "keywords": [
+    "todo",
+    "app",
+    "AngularJS"
+  ],
+  "author": "Vladimir Kolesnikov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Panbaba9n/ToDoAngularJS/issues"
+  },
+  "homepage": "https://github.com/Panbaba9n/ToDoAngularJS#readme",
   "dependencies": {
     "angular": "^1.6.7",
     "angular-animate": "^1.6.7",
@@ -16,6 +35,7 @@
     "angular-resource": "^1.6.7",
     "angular-sanitize": "^1.6.7",
     "angular-ui-router": "^0.4.3",
+    "bootstrap": "^4.1.3",
     "moment": "^2.19.3"
   },
   "devDependencies": {
