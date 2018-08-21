@@ -20,6 +20,7 @@
     <!-- build:css css/style.min.css -->
     <link rel="stylesheet" type="text/css" href="styles/style.css"/>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="app/app.css" />
     <link rel="stylesheet" href="app/app.animations.css" />
     <!-- endbuild -->
@@ -30,12 +31,13 @@
 <div  ng-if="$pageFinishedLoading" class="view-container">
     <!--<div ng-view class="view-frame"></div>-->
     <ui-view></ui-view>
+    <back-top></back-top>
 </div>
 
 
-<div id="preloader" ng-show="!$pageFinishedLoading">
-    <div></div>
-</div>
+<!--<div id="preloader" ng-show="!$pageFinishedLoading">-->
+    <!--<div></div>-->
+<!--</div>-->
 
 
 <!-- Vendors -->
@@ -93,6 +95,8 @@
 
 <script src="app/phone-table/phone-list.module.js"></script>
 <script src="app/phone-table/phone-list.component.js"></script>
+<script src="app/theme/components/components.module.js"></script>
+<script src="app/theme/components/backTop/backTop.directive.js"></script>
 
 
 
